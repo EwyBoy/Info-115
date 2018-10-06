@@ -39,10 +39,16 @@ G.add_edges_from([(32,1),(32,25),(32,26),(32,29)])
 G.add_edges_from([(33,3),(33,9),(33,15),(33,16),(33,19),(33,21),(33,23),(33,24),(33,30),(33,31),(33,32),(33,34)])
 G.add_edges_from([(34,9),(34,10),(34,14),(34,15),(34,16),(34,19),(34,20),(34,21),(34,23),(34,24),(34,27),(34,28),(34,29),(34,30),(34,31),(34,32),(34,33)])
 
+print(nx.degree_centrality(G))
+print(nx.betweenness_centrality(G))
+print(nx.closeness_centrality(G))
+print(nx.average_clustering(G))
+print(nx.connectivity.local_edge_connectivity(G, 1, 34))
+
 options = {
     'node_color': 'black',
-    'node_size': 100,
-    'width': 3,
+    'node_size': 50,
+    'width': 1,
 }
 
 nx.draw_circular(G, **options)
