@@ -45,12 +45,32 @@ print(nx.closeness_centrality(G))
 print(nx.average_clustering(G))
 print(nx.connectivity.local_edge_connectivity(G, 1, 34))
 
+color_map_nodes=[]
+color_map_edges=[]
+
+for node in G:
+    if node==1:
+        color_map_nodes.append('red')
+    elif node==34:
+        color_map_nodes.append('blue')
+    else:
+        color_map_nodes.append('black')
+
+for edge in G.edges:
+    if edge[0]==1:
+        color_map_edges.append('red')
+    elif edge[1]==34:
+        color_map_edges.append('blue')
+    else:
+        color_map_edges.append('black')
+
 options = {
-    'node_color': 'black',
-    'node_size': 50,
+    'font_size': 8,
+    'font_color': 'white',
+    'node_size': 100,
     'width': 1,
 }
 
-nx.draw_circular(G, **options)
+nx.draw_circular(G, node_color=color_map_nodes, edge_color=color_map_edges, with_labels=True, **options)
 
 plt.show()
