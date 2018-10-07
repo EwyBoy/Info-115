@@ -1,2 +1,2 @@
-Petter: 1.2
-Eivind: 1.1
+Petter: Oppgave 2.1, 2.2
+Eivind: Oppgave 3, 3.1, 3.2, 3.3
