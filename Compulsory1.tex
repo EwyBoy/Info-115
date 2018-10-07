@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{csquotes}
 
 \title{ Compulsory Assignment 1}
 \author{ Petter Jakub Økland - 223073\\
@@ -15,11 +16,11 @@ Eivind Norling - 267792}
 \subsection{}
 \begin{figure}
   \includegraphics[width=\linewidth]{Figure_1.png}
-  \caption{A graph.}
+  \caption{Graph of karate club network.}
   \label{fig:graph model}
 \end{figure}
 
-Figure \ref{fig:graph model} shows a graph.
+Figure \ref{fig:graph model} shows a graph of the karate club network.
 
 \subsection{}
 Zachary\cite{Zachary} analyzes the splintering of a karate club into two different organizations
@@ -47,7 +48,7 @@ a unique minimum cut in a capacitated network can be established, it will under 
 conditions (here communication of club meetings) result in a barrier to group unity which
 can end up in a group fission.
 
-\section{}
+\subsection{}
 Running the following functions yielded the following results:\\
 \\
 degree\_centrality(G)\\
@@ -89,12 +90,134 @@ average\_clustering(G)\\
 0.5706384782076823
 \\\\
 connectivity.local\_edge\_connectivity(G, 1, 34)\\
-10\\
-\\\\
-As can be seen bla bla.
+10
 
 \section{Polarized blogging about climate change}
+\subsection{}
+Statistics:\\
+Average degree: \hfill 2.524\\
+Network diameter: \hfill 4\\
+Graph density (undirected): \hfill 0.001\\
+Modularity: \hfill 0.667\\
+Connected components: \hfill 1\\
+Average Clustering Coefficient: \hfill 0.249\\
+Average path length: \hfill 3.236\\
+\\
+\begin{figure}
+  \includegraphics[width=\linewidth]{Figure_2.png}
+  \caption{A graph of the network.}
+  \label{fig:graph}
+\end{figure}
 
+Figure \ref{fig:graph} shows a graph of the network of climate blogs.
+
+\subsection{}
+\textbf{https://wattsupwiththat.com/}\\
+Anthony is a former meteorologist who appears to express his position on climate
+change emotively by cataloging percieved faults by those who adhere to the fact of
+anthropogenic global warming in what he calles ''Climate FAIL Files''. Interestingly
+he lists the following as the reason for changing his mind about climate change on
+the FAQ page:
+
+\begin{displayquote}
+\textit{My questioning started due to a professional friendship that came
+about with Jim Goodridge. [...] He had showed me some of his investigations into
+California’s temperature and precipitation records that didn’t quite add up to some
+of the claims about warming I was reading about.}
+\end{displayquote}
+
+\textbf{https://www.desmogblog.com}\\
+The position on climate change in this blog appears to be staunchly against
+the views expressed by climate deniers, aiming to catalog all disinformation
+campaigns in the ''Climate Disinformation Database''. As it says on the
+database page:
+
+\begin{displayquote}
+\textit{DeSmogBlog thoroughly investigates the academic and industry backgrounds of those
+involved in the PR spin campaigns that are confusing the public and stalling action
+on global warming.}
+\end{displayquote}
+
+\textbf{http://joannenova.com.au/}\\
+Jo expresses her views on climate change by insinuating that scientists working on
+data which confirms the reality of global warming are motivated by money and that
+their data doesn't stand up to scrutiny due to things like spelling errors,
+ostensible elementary mistakes in the data itself, and lack of audit and control
+despite papers having to be submitted to a rigorous peer review process.\\
+\\
+\textbf{https://judithcurry.com/}\\
+Judith's blog presents itself on the about page as follows:
+
+\begin{displayquote}
+\textit{Climate Etc. provides a forum for climate researchers, academics and technical experts
+from other fields, citizen scientists, and the interested public to engage in a
+discussion on topics related to climate science and the science-policy interface.}
+\end{displayquote}
+
+There doesn't appear to be any ideological position taken and the blog's purpose
+is to encourage debate around climate science.\\
+\\
+\textbf{http://www.climatecentral.org/}\\
+Climate Central presents themselves as follows:
+
+\begin{displayquote}
+\textit{An independent organization of leading scientists and journalists researching and
+reporting the facts about our changing climate and its impact on the public.}
+\end{displayquote}
+
+They express their views on climate change as it being a reality, presents its
+effects, backs it up with research and data, and discusses possible solutions to the
+problem as well as what's being done and has been done so far.\\
+
+\textbf{https://insideclimatenews.org/}\\
+ICN accept the reality of climate change and seeks to act as watchdog against
+governments and groups that pose a threat to the vital work needed to combat it.
+They cover all news related to climate change including policies that affect it.
+As it reads on their about page:
+
+\begin{displayquote}
+\textit{InsideClimate News is an independent, not-for-profit, non-partisan news organization
+that covers clean energy, carbon energy, nuclear energy and environmental science—plus
+the territory in between where law, policy and public opinion are shaped.}
+\end{displayquote}
+
+\textbf{http://www.climatechangenews.com/}\\
+Very much the same as the former:
+
+\begin{displayquote}
+\textit{Climate Home News is an independent news site dedicated to bringing important climate
+stories to as large an audience as possible.}
+\end{displayquote}
+
+
+\textbf{http://www.realclimate.org/}\\
+RealClimate presents news about climate change in the eyes of climate scientists. It
+allows comments on its posts which encourages discussion around the science of
+climate change for anyone interested. Unsurprisingly they do not deny the reality of
+anthropogenic global warming.  As it reads on their about page:
+
+\begin{displayquote}
+\textit{RealClimate is a commentary site on climate science by working climate scientists for
+the interested public and journalists. We aim to provide a quick response to developing
+stories and provide the context sometimes missing in mainstream commentary. The
+discussion here is mostly restricted to scientific topics and will only rarely get
+involved in any political or economic implications of the science.}
+\end{displayquote}
+
+
+\textbf{https://www.skepticalscience.com/}\\
+SkepticalScience combats the misinformation by climate deniers by debunking their
+claims head on and looking at what the evidence actually says. It was created by
+John Cook, a cognitive scientist. As it reads on the front page:
+
+\begin{displayquote}
+\textit{Scientific skepticism is healthy. Scientists should always challenge themselves to
+improve their understanding. Yet this isn't what happens with climate change denial.
+Skeptics vigorously criticise any evidence that supports man-made global warming and
+yet embrace any argument, op-ed, blog or study that purports to refute global warming.
+This website gets skeptical about global warming skepticism. Do their arguments have
+any scientific basis? What does the peer reviewed scientific literature say?}
+\end{displayquote}
 
 \section{The psychology of social media}
 
