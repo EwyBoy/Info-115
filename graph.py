@@ -49,17 +49,21 @@ color_map_nodes=[]
 color_map_edges=[]
 
 for node in G:
-    if node==1:
+    if node==33:
         color_map_nodes.append('red')
-    elif node==34:
+    elif node==3:
+        color_map_nodes.append('green')
+    elif node==32:
         color_map_nodes.append('blue')
     else:
         color_map_nodes.append('black')
 
 for edge in G.edges:
-    if edge[0]==1:
+    if edge[0]==33 or edge[1]==33:
         color_map_edges.append('red')
-    elif edge[1]==34:
+    elif edge[0]==3 or edge[1]==3:
+        color_map_edges.append('green')
+    elif edge[0] == 32 or edge[1]==32:
         color_map_edges.append('blue')
     else:
         color_map_edges.append('black')
@@ -68,7 +72,7 @@ options = {
     'font_size': 8,
     'font_color': 'white',
     'node_size': 100,
-    'width': 1,
+    'width': 2,
 }
 
 nx.draw_circular(G, node_color=color_map_nodes, edge_color=color_map_edges, with_labels=True, **options)
