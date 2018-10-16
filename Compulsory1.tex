@@ -5,10 +5,17 @@
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{url}
+\usepackage{amsmath}
+\usepackage{ragged2e}
 
 \title{ Compulsory Assignment 1}
-\author{ Petter Jakub Økland - 223073\\
-Eivind Norling - 267792}
+\author{
+  Petter Jakub Økland\\
+  \texttt{223073}
+  \and
+  Eivind Norling\\
+  \texttt{267792}
+}
 
 \begin{document}
 \maketitle
@@ -27,20 +34,20 @@ Figure \ref{fig:graph model} shows a graph of the karate club network.
 Zachary\cite{Zachary} analyzes the splintering of a karate club into two different organizations
 over a dispute over lessen fees. He lists several reasons for formalizing this fission
 process into a mathematical model, the most important perhaps being that the model is
-new to anthropology.\\
-\\
+new to anthropology.
+
 His analysis shows how the flow of political information predicts the two opposing
 factions' increasingly divergent views and strategy ultimately leading to a fission
 as information flow between factions becomes increasingly hampered by a bottleneck
-of information between them.\\
-\\
+of information between them.
+
 Beyond just club meetings, shared perceptions on the nature of the club communicated
 in the friendship network was unable to become reconciled accross factional boundraries.
 An organizational and ideological feedback relationship -- a vicious cycle-- wherein the
 strategy of the factions increasingly intensified the ideological divide while threatening
 the organizational basis for the network's existence itself made the fission all but
-inevitable.\\
-\\
+inevitable.
+
 The form of this analysis can be applied to more than just the karate club, extending to
 analysis of communication patterns in small groups in general due to the inherency of the
 the feature of the minimum cut in a capacitated network in this mathematical model, which
@@ -49,64 +56,63 @@ a unique minimum cut in a capacitated network can be established, it will under 
 conditions (here communication of club meetings) result in a barrier to group unity which
 can end up in a group fission.
 
-\subsection{}
-Running the following functions yielded the following results:\\
-\\
-\textbf{degree\_centrality(G)}\\
-1: 0.48484848484848486, 2: 0.2727272727272727, 3: 0.30303030303030304,
-4: 0.18181818181818182, 5: 0.09090909090909091, 6: 0.12121212121212122,
-7: 0.12121212121212122, 8: 0.12121212121212122, 9: 0.15151515151515152,
-10: 0.06060606060606061, 11: 0.09090909090909091, 12: 0.030303030303030304,
-13: 0.06060606060606061, 14: 0.15151515151515152, 15: 0.06060606060606061,
-16: 0.06060606060606061, 17: 0.06060606060606061, 18: 0.06060606060606061,
-19: 0.06060606060606061, 20: 0.09090909090909091, 21: 0.06060606060606061,
-22: 0.06060606060606061, 23: 0.06060606060606061, 24: 0.15151515151515152,
-25: 0.09090909090909091, 26: 0.09090909090909091, 27: 0.06060606060606061,
-28: 0.12121212121212122, 29: 0.09090909090909091, 30: 0.12121212121212122,
-31: 0.12121212121212122, 32: 0.18181818181818182, 33: 0.36363636363636365,
-34: 0.5151515151515151
-\\\\
-\textbf{betweenness\_centrality(G)}\\
-1: 0.43763528138528146, 2: 0.053936688311688304, 3: 0.14365680615680618,
-4: 0.011909271284271283, 5: 0.0006313131313131313, 6: 0.02998737373737374,
-7: 0.029987373737373736, 8: 0.0, 9: 0.05592682780182781, 10: 0.0008477633477633478,
-11: 0.0006313131313131313, 12: 0.0, 13: 0.0, 14: 0.04586339586339586, 15: 0.0,
-16: 0.0, 17: 0.0, 18: 0.0, 19: 0.0, 20: 0.03247504810004811, 21: 0.0, 22: 0.0,
-23: 0.0, 24: 0.017613636363636363, 25: 0.0022095959595959595, 26: 0.0038404882154882154,
-27: 0.0, 28: 0.02233345358345358, 29: 0.0017947330447330447, 30: 0.0029220779220779218,
-31: 0.014411976911976909, 32: 0.13827561327561325, 33: 0.145247113997114, 34: 0.30407497594997596
-\\\\
-\textbf{closeness\_centrality(G)}\\
-1: 0.5689655172413793, 2: 0.4852941176470588, 3: 0.559322033898305,
-4: 0.4647887323943662, 5: 0.3793103448275862, 6: 0.38372093023255816,
-7: 0.38372093023255816, 8: 0.44, 9: 0.515625, 10: 0.4342105263157895,
-11: 0.3793103448275862, 12: 0.36666666666666664, 13: 0.3707865168539326,
-14: 0.515625, 15: 0.3707865168539326, 16: 0.3707865168539326, 17: 0.28448275862068967,
-18: 0.375, 19: 0.3707865168539326, 20: 0.5, 21: 0.3707865168539326,
-22: 0.375, 23: 0.3707865168539326, 24: 0.39285714285714285, 25: 0.375,
-26: 0.375, 27: 0.3626373626373626, 28: 0.4583333333333333, 29: 0.4520547945205479,
-30: 0.38372093023255816, 31: 0.4583333333333333, 32: 0.5409836065573771, 33: 0.515625, 34: 0.55
-\\\\
-\textbf{average\_clustering(G)}\\
-0.5706384782076823
-\\\\
-\textbf{connectivity.local\_edge\_connectivity(G, 1, 34)}\\
-10\\
-\\
+\subsection{ Results of various measures in NetworkX (rounded up): }
+\textbf{degree\_centrality(G)}
+
+\begin{align*}
+1: 0.48 && 2: 0.27 && 3: 0.3 && 4: 0.18 \\
+5: 0.09 && 6: 0.12 && 7: 0.12 && 8: 0.12 \\
+9: 0.15 && 10: 0.06 && 11: 0.09 && 12: 0.03 \\
+13: 0.06 && 14: 0.15 && 15: 0.06 && 16: 0.06 \\
+17: 0.06 && 18: 0.06 && 19: 0.06 && 20: 0.09 \\
+21: 0.06 && 22: 0.06 && 23: 0.06 && 24: 0.15 \\
+25: 0.09 && 26: 0.09 && 27: 0.06 && 28: 0.12 \\
+29: 0.09 && 30: 0.12 && 31: 0.12 && 32: 0.18 \\
+33: 0.36 && 34: 0.52 && &&
+\end{align*}
+
+\textbf{betweenness\_centrality(G)}
+
+\begin{align*}
+1: 0.438 && 2: 0.053 && 3: 0.14 && 4: 0.012 \\
+5: 0.0006 && 6: 0.030 && 7: 0.030 && 8: 0.0 \\
+9: 0.056 && 10: 0.0008 && 11: 0.0006 && 12: 0.0 \\
+13: 0.0 && 14: 0.046 && 15: 0.0 && 16: 0.0 \\
+17: 0.0 && 18: 0.0 && 19: 0.0 && 20: 0.032 \\
+21: 0.0 && 22: 0.0 && 23: 0.0 && 24: 0.018 \\
+25: 0.0022 && 26: 0.0038 && 27: 0.0 && 28: 0.022 \\
+29: 0.0018 && 30: 0.0029 && 31: 0.014 && 32: 0.14 \\
+33: 0.15 && 34: 0.3 && && 
+\end{align*}
+
+\textbf{closeness\_centrality(G)}
+
+\begin{align*}
+1: 0.57 &&  2: 0.49 && 3: 0.56 && 4: 0.46 \\
+5: 0.38 && 6: 0.38 && 7: 0.38 && 8: 0.44 \\
+9: 0.52 && 10: 0.43 && 11: 0.38 && 12: 0.37 \\
+13: 0.37 && 14: 0.52 && 15: 0.37 && 16: 0.37 \\
+17: 0.28 && 18: 0.38 && 19: 0.37 && 20: 0.5 \\
+21: 0.37 && 22: 0.38 && 23: 0.37 && 24: 0.39 \\
+25: 0.38 && 26: 0.38 && 27: 0.36 && 28: 0.46 \\
+29: 0.45 && 30: 0.38 && 31: 0.46 && 32: 0.54 \\
+33: 0.52 && 34: 0.55 && &&
+\end{align*}
+
+\textbf{average\_clustering(G)}
+
+\begin{align*}0.5706384782076823\end{align*}
+
+\textbf{connectivity.local\_edge\_connectivity(G, 1, 34)}
+
+\begin{align*}10\end{align*}
+
+\paragraph{Discussion} \hspace{0pt} \\
 Betweenness centrality -- the most important measure -- shows unsurprisingly the two
 central figures with the highest score, followed by 33, 3, and 32, respectively.
 
 \section{Polarized blogging about climate change}
 \subsection{}
-\textbf{Statistics:}\\
-Average degree: \hfill 2.524\\
-Network diameter: \hfill 4\\
-Graph density (undirected): \hfill 0.001\\
-Modularity: \hfill 0.667\\
-Connected components: \hfill 1\\
-Average Clustering Coefficient: \hfill 0.249\\
-Average path length: \hfill 3.236\\
-\\
 \begin{figure}
   \includegraphics[width=\linewidth]{Figure_2.png}
   \caption{A graph of the network of climate blogs.}
@@ -115,8 +121,26 @@ Average path length: \hfill 3.236\\
 
 Figure \ref{fig:graph} shows a graph of the network of climate blogs.
 
+\textbf{}
+\newline
+\textbf{Statistics:} \hspace{0pt}
+
+Average degree: \hfill 2.524
+
+Network diameter: \hfill 4
+
+Graph density (undirected): \hfill 0.001
+
+Modularity: \hfill 0.667
+
+Connected components: \hfill 1
+
+Average Clustering Coefficient: \hfill 0.249
+
+Average path length: \hfill 3.236
+
 \subsection{}
-\textbf{https://wattsupwiththat.com/}\\
+\paragraph{https://wattsupwiththat.com/} \hspace{0pt} \\
 Anthony is a former meteorologist who appears to express his position on climate
 change emotively by cataloging percieved faults by those who adhere to the fact of
 anthropogenic global warming in what he calles ''Climate FAIL Files''. Interestingly
@@ -130,7 +154,7 @@ California’s temperature and precipitation records that didn’t quite add up 
 of the claims about warming I was reading about.}
 \end{displayquote}
 
-\textbf{https://www.desmogblog.com}\\
+\paragraph{https://www.desmogblog.com} \hspace{0pt} \\
 The position on climate change in this blog appears to be staunchly against
 the views expressed by climate deniers, aiming to catalog all disinformation
 campaigns in the ''Climate Disinformation Database''. As it says on the
@@ -142,14 +166,14 @@ involved in the PR spin campaigns that are confusing the public and stalling act
 on global warming.}
 \end{displayquote}
 
-\textbf{http://joannenova.com.au/}\\
+\paragraph{http://joannenova.com.au/} \hspace{0pt} \\
 Jo expresses her views on climate change by insinuating that scientists working on
 data which confirms the reality of global warming are motivated by money and that
 their data doesn't stand up to scrutiny due to things like spelling errors,
 ostensible elementary mistakes in the data itself, and lack of audit and control
-despite papers having to be submitted to a rigorous peer review process.\\
-\\
-\textbf{https://judithcurry.com/}\\
+despite papers having to be submitted to a rigorous peer review process.
+
+\paragraph{https://judithcurry.com/} \hspace{0pt} \\
 Judith's blog presents itself on the about page as follows:
 
 \begin{displayquote}
@@ -159,9 +183,9 @@ discussion on topics related to climate science and the science-policy interface
 \end{displayquote}
 
 There doesn't appear to be any ideological position taken and the blog's purpose
-is to encourage debate around climate science.\\
-\\
-\textbf{http://www.climatecentral.org/}\\
+is to encourage debate around climate science.
+
+\paragraph{http://www.climatecentral.org/} \hspace{0pt} \\
 Climate Central presents themselves as follows:
 
 \begin{displayquote}
@@ -171,21 +195,21 @@ reporting the facts about our changing climate and its impact on the public.}
 
 They express their views on climate change as it being a reality, presents its
 effects, backs it up with research and data, and discusses possible solutions to the
-problem as well as what's being done and has been done so far.\\
+problem as well as what's being done and has been done so far.
 
-\textbf{https://insideclimatenews.org/}\\
+\paragraph{https://insideclimatenews.org/} \hspace{0pt} \\
 ICN accept the reality of climate change and seeks to act as watchdog against
 governments and groups that pose a threat to the vital work needed to combat it.
 They cover all news related to climate change including policies that affect it.
 As it reads on their about page:
 
 \begin{displayquote}
-\textit{InsideClimate News is an independent, not-for-profit, non-partisan news organization
-that covers clean energy, carbon energy, nuclear energy and environmental science—plus
+\textit{InsideClimate News is an independent, not\-for\-profit, non\-partisan news organization
+that covers clean energy, carbon energy, nuclear energy and environmental science\-plus
 the territory in between where law, policy and public opinion are shaped.}
 \end{displayquote}
 
-\textbf{http://www.climatechangenews.com/}\\
+\paragraph{http://www.climatechangenews.com/} \hspace{0pt} \\
 Very much the same as the former:
 
 \begin{displayquote}
@@ -194,7 +218,7 @@ stories to as large an audience as possible.}
 \end{displayquote}
 
 
-\textbf{http://www.realclimate.org/}\\
+\paragraph{http://www.realclimate.org/} \hspace{0pt} \\
 RealClimate presents news about climate change in the eyes of climate scientists. It
 allows comments on its posts which encourages discussion around the science of
 climate change for anyone interested. Unsurprisingly they do not deny the reality of
@@ -209,7 +233,7 @@ involved in any political or economic implications of the science.}
 \end{displayquote}
 
 
-\textbf{https://www.skepticalscience.com/}\\
+\paragraph{https://www.skepticalscience.com/} \hspace{0pt} \\
 SkepticalScience combats the misinformation by climate deniers by debunking their
 claims head on and looking at what the evidence actually says. It was created by
 John Cook, a cognitive scientist. As it reads on the front page:
@@ -230,28 +254,28 @@ any scientific basis? What does the peer reviewed scientific literature say?}
 We chose these 10 sources to articles, videos or posts that are concerned with the
 negative consequences and downsides of the usage social media and how it can affect
 our mental health. We think they cover a wide variety of different aspect, research
-and side effects to your mental health regarding social media.\\
-\\
+and side effects to your mental health regarding social media.
+
 The first source \cite{youtube1} is a YouTube video produced by BuzzFeed about Aria
 Inthavong who live-streamed his entire life for 7 days, 24 hour a day onto social media.
 For the duration of the livestream he had a couple thousand people watching and interacting
 with the stream at all times, reacting to all his moves and judging him by his actions.
 Aria himself describes this as one of his life's most mentally challenging weeks and
-describes how shearing everything in your life online broke him down his mental health.\\
-\\
+describes how shearing everything in your life online broke him down his mental health.
+
 Source number two \cite{medium} is a article written by Tristan Harris. He is the
 co-founder of Center for Humane Technology, previously worked for Google and has a
 broad technological background. In his article, “How Technology is Hijacking Your Mind
 — from a Magician and Google Design Ethicist” he talks about how technology is designed
-to exploit people's mind and weaknesses.\\
-\\
+to exploit people's mind and weaknesses.
+
 The third source \cite{thenewatlantis} I want to bring attention to is this article
 from the summer of 2010. The article is written by Roger Scruton who is a English
 writer and philosopher. In his article “Hiding Behind the Screen” he talks about
 human relations and how people's behavior change when they can hide behind a screen
 or an avatar. He also dives into the subject of how people are seeking emotional
-attention on the internet.\\
-\\
+attention on the internet.
+
 The fourth source \cite{youtube2} is a another YouTube video. It is published on
 the youtube channel Ewafa and the video is about an interview with Sean Parker and
 Chamath Palihapitiya. The video is named “Facebook is ‘Ripping Apart Society’”. The
@@ -260,8 +284,8 @@ what Sean Parker is describing as a social validation feedback loop and how the 
 companies are tailoring their algorithms to exploit the psychology of the human brain
 on how we crave recognition and the need for “Likes” for that quick fix of a dopamine
 rush. Chamath talks a lot about the same but digs a bit deeper into the phycology part.
-He speaks about how humans not wants instant feedback and how we have lost our patience.\\
-\\
+He speaks about how humans not wants instant feedback and how we have lost our patience.
+
 The fifth source \cite{benthamsgaze} we have chosen is a more technical article about
 a phenomenon called “Like Farms”. The article does not dig much into the physiological
 aspects of farming and buying likes but we still find this article relevant to the
@@ -275,19 +299,19 @@ personal army of fake accounts. We find it incredible that people are so addicte
 these imaginary points we call likes that they are willing to go to the extent of buy
 them. It also amazes us that there is in fact people on this globe whos job is to create
 fake social media accounts and go into paying customers media posts and pages just to
-give em a dopamine rush and some fake acknowledgement.\\
-\\
+give em a dopamine rush and some fake acknowledgement.
+
 The sixth source \cite{psychologytoday1} is from a article we found on Psychology Today
 and is written in March 2016 by Martin Graff who is a professor in digital love. In his
 article named “Do You Crave Facebook Likes?” he talks about his study where he looked
 into what aspects of validation people seeked from social media on how it affected
-their self-esteem and personality.\\
-\\
+their self-esteem and personality.
+
 The seventh source \cite{psychologytoday2} is an article from Psychology Today. This
 one is written by professor Mark D. Griffiths and was written in May 2018. This article
 named “Addicted to Social Media?” brings up the topic of what can be done to reduce the
-excessive use of social media.\\
-\\
+excessive use of social media.
+
 The eight source \cite{youtube3} is a YouTube video that have gone viral. The video was
 posted August 8, 2016 on the YouTube channel “Freedom in Thought” with the title “WHY I
 QUIT SOCIAL MEDIA FOR A YEAR AND WHAT I LEARNED”. In his video he describe that he quit
@@ -296,11 +320,12 @@ describes how he before replaced a lot of the things he used to enjoy in life an
 to kill both time and socially awkward situations by hiding behind his phone. The first
 half of the video he describes how the social media machinery is wired to abuse
 weaknesses in our brain and constructed to consume as much attention from each user as
-possible to keep them on the platforms for as long as possible.\\
+possible to keep them on the platforms for as long as possible.
+
 In the second half of the video he talks about how quitting social media helped him stay
 focused for extended amounts of time, relieved stress and created a distraction free
-environment so he could focus his energy into other things he enjoy.\\
-\\
+environment so he could focus his energy into other things he enjoy.
+
 The ninth source \cite{lifehack} we want to bring to attention is this blog-post posted
 on Lifehack by Heather Poole. In her post she talks about how we build these huge
 networks of “fake” friends over the years while using Facebook. Everytime we meet a new
@@ -311,17 +336,17 @@ the person want to shear with the world. On social media everyone paints their o
 version of themself and for most people that is the happy side where everything is
 glitter and gold. She suggest to filter out and delete the friends you haven’t had a
 offline conversation to do with in the last year. Heather claims this is a good way to
-keep a healthy relationship to your social media friends.\\
-\\
+keep a healthy relationship to your social media friends.
+
 The tenth and final source \cite{economist} is a article from The Economist named “How
 heavy use of social media is linked to mental illness” and the article is talking about
 exactly what the title implies. The article refers a graph showcasing the different
 positive and negative aspects of four different social media sites. The sites are
 Instagram, Snapchat, Facebook and Twitter and it uses color to describe how positive
 or negative the different aspects are affecting people from 14 to 24 years-old. They
-have different factors like sleep, bullying and body image.\\
-\\
-\textbf{Summery}\\
+have different factors like sleep, bullying and body image.
+
+\paragraph{Summary} \hspace{0pt} \\
 To summarize all the the ten sources above, they all are the result of the big
 corporations created the social medias trying to keep you on their site for as long as
 possible. Apps where you maintain fake relationships and present your fake life to fake
@@ -334,7 +359,8 @@ back into research on how to manipulate you even more and keep you on their plat
 Every time you refresh a page, you are awarded with new content and information. This
 is food for your brain and our brains love to learn. This is triggering our dopamine
 receptors, and as we continue to repeat this loop we keep strengthening this loop, and
-addiction.\\\\
+addiction.
+
 The main thing we can see from all these sources is that this is simply not good for us.
 If we look at Arias video from BuzzFeed we can see that concentrated amounts of social
 media interaction can break down a human emotialy in pretty fast. While excessive and
@@ -344,7 +370,8 @@ that can make you more happy.
 
 
 \pagebreak
-\bibliography{references.bib}
-\bibliographystyle{ieeetr}
-
+{\RaggedRight
+  \bibliography{references.bib}
+  \bibliographystyle{ieeetr}
+}
 \end{document}
