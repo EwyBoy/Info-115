@@ -49,32 +49,32 @@ color_map_nodes=[]
 color_map_edges=[]
 
 for node in G:
-    if node==33:
+    if node==1 or node==2 or node==4 or node==5 or node==6 or node==7 or node==8 or node==11 or node==12 or node==13 or  node==18 or  node==22:
         color_map_nodes.append('red')
-    elif node==3:
+    elif node==9 or node==14 or node==20 or node==32:
         color_map_nodes.append('green')
-    elif node==32:
+    elif node==34 or  node==10 or node==15 or node==16 or node==19 or node==21 or node==23 or node==24 or node==27 or node==28 or node==29 or node==30 or node==31 or node==33:
         color_map_nodes.append('blue')
     else:
         color_map_nodes.append('black')
 
 for edge in G.edges:
-    if edge[0]==33 or edge[1]==33:
+    if edge[0]==1 or edge[1]==1:
         color_map_edges.append('red')
-    elif edge[0]==3 or edge[1]==3:
+    elif (edge[0]==9 or edge[1]==9 or edge[0]==14 or edge[1]==14 or edge[0]==20 or edge[1]==20 or edge[0]==32 or edge[1]==32) and edge[0]!=1 and edge[0]!=34 and edge[1]!=1 and edge[1]!=34:
         color_map_edges.append('green')
-    elif edge[0] == 32 or edge[1]==32:
+    elif edge[0]==34 or edge[1]==34:
         color_map_edges.append('blue')
     else:
         color_map_edges.append('black')
 
 options = {
-    'font_size': 8,
+    'font_size': 12,
     'font_color': 'white',
-    'node_size': 100,
+    'node_size': 200,
     'width': 2,
 }
 
-nx.draw_circular(G, node_color=color_map_nodes, edge_color=color_map_edges, with_labels=True, **options)
+nx.draw_spring(G, node_color=color_map_nodes, edge_color=color_map_edges, with_labels=True, **options)
 
 plt.show()

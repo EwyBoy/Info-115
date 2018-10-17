@@ -111,13 +111,38 @@ can end up in a group fission.
 \begin{align*}10\end{align*}
 
 \paragraph{Discussion} \hspace{0pt} \\
-Betweenness centrality -- the most important measure -- shows unsurprisingly the two
-central figures with the highest score, followed by 33, 3, and 32, respectively.
+Betweenness centrality -- the most important centrality measure -- shows unsurprisingly
+the two central figures with the highest score, followed by 33, 3, and 32, respectively.
+
+32 -- along with 9, 14, and 20 -- are the only nodes with direct connections to both
+central figures. Intuitively, then, we can assume they were central to information flow
+between the factions.
+
+As the local edge connectivity result shows, 10 nodes would have to be removed for
+nodes 1 and 34 to become isolated from each other. It wouldn't be surprising if we
+found nodes 3, 9, 14, 20, 32, and 33 among them.
+
+\subsection{}
+Figure \ref{fig:graph model2} shows another graph of the karate club network with
+higlights we found important. Red nodes and edges show direct connections to node 1
+in the network, blue nodes and edges show direct connections to node 34, green nodes
+are those with direct connections to both nodes 1 and 34, while green edges show
+connections from green nodes to nodes other than 1 and 34. Black nodes and edges are
+any those without the listed criterias.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Figure_2.png}
+  \caption{Graph of Karate Club network with highlights.}
+  \label{fig:graph model2}
+\end{figure}
+
+\subsection{}
+Discussion of analysis in light of article.
 
 \section{Polarized blogging about climate change}
 \subsection{}
 \begin{figure}
-  \includegraphics[width=\linewidth]{Figure_2.png}
+  \includegraphics[width=\linewidth]{Figure_3.png}
   \caption{A graph of the network of climate blogs.}
   \label{fig:graph}
 \end{figure}
@@ -249,6 +274,12 @@ yet embrace any argument, op-ed, blog or study that purports to refute global wa
 This website gets skeptical about global warming skepticism. Do their arguments have
 any scientific basis? What does the peer reviewed scientific literature say?}
 \end{displayquote}
+
+\subsection{}
+Characterize the network
+
+\subsection{}
+Discussion in light of literature we know
 
 \section{The psychology of social media}
 
