@@ -4,8 +4,11 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{csquotes}
-\usepackage{url}
 \usepackage{amsmath}
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
 
 \title{ Compulsory Assignment 1}
 \author{
@@ -19,9 +22,9 @@
 \begin{document}
 \maketitle
 
-Vi jobbet sammen på en GitHub repository\cite{git} og delegerte oppgaver gjennom en TODO
-text fil. Gjennom Facebook diskuterte vi oppgavene og analyser, samt hvilken kilder vi
-skulle legge til i oppgave 3.
+We worked together using a GitHub repository\cite{git} and delegated assignments through
+a TODO file. Through Facebook we discussed the assignments and analyses as well as what
+sources to add in the third assignment.
 
 \section{The Karate Club Network}
 \subsection{}
@@ -401,7 +404,6 @@ media interaction can break down a human emotialy in pretty fast. While excessiv
 compulsive usage of social media has many downsides, Freedom in Thought’s video shows
 us that completely abandoning social media can both be a positive and healing experience
 that can make you more happy.
-
 
 \pagebreak
 \bibliography{references.bib}
