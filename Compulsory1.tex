@@ -117,7 +117,7 @@ can end up in a group fission.
 
 \begin{align*}10\end{align*}
 
-\paragraph{Discussion} \hspace{0pt} \\
+\paragraph{} \hspace{0pt} \\
 Betweenness centrality -- the most important centrality measure -- shows unsurprisingly
 the two central figures with the highest score, followed by 33, 3, and 32, respectively.
 
@@ -293,10 +293,73 @@ any scientific basis? What does the peer reviewed scientific literature say?}
 \end{displayquote}
 
 \subsection{}
-Characterize the network
+skepticalscience looks to be quite interconnected with the rest of the network running
+the Ego Network filter with depth 2, \ref{fig:graph2} cutting out nodes that are only
+connected to realclimate, judithcurry, wattsupwiththat, desmongblogs, and climatechangenews.
+This is half the nodes in the network, so despite its looks, a lot of nodes drop out.
+Running the K-core filter also with 2 removes all nodes with only one edge
+into the network. Even with 3\ref{fig:graph3}, all the major blogs appear to be in one largerly
+interconnected network, although many nodes connected with a single edge disappear.
+
+This suggests fragmantation and polarization on the level of small individual blogs
+who have very few connections to the major network of larger blogs. Although
+few steps are required to connect to other larger nodes with different ideological positions,
+they seem to favor only one source (large blog) which is ideologically similar in nature.
+
+We visualized the graph as shown by running the ForceAtlas2 layout algorithm. It does a great
+job of highlighting major and smaller nodes in a compact and intuitive manner. All the major
+nodes in the network have mushroom hats and are easy to trace. From the left (and going down
+and around in a circle) we have: insideclimatenews, climatecentral, realclimate, judithcurry,
+joannenova, wattsupwiththat, desmongblogs, and climatechangenews. In the middle of the graph,
+circled by nodes, we have skepticalscience.
+
+Finally we chose to color deniers in blue, scientists and the like in red, and neutral in green,
+which is best seen in the main graph.\ref{fig:graph}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Figure_4.png}
+  \caption{Result of running the Ego Network filter on the skepticalscience node (node is in the middle of the graph).}
+  \label{fig:graph2}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Figure_5.png}
+  \caption{Result of running the K-core filter with a value of 3.}
+  \label{fig:graph3}
+\end{figure}
+
 
 \subsection{}
-Discussion in light of literature we know
+In light of what we know about how social media works with regards to polarization,
+algorithms which cater to what people want has a tendency to feed their particular
+biases in various topics. As we see with the network of climate blogs, although larger
+nodes cross ideological divides, the smaller individuals following these larger nodes
+tend not to follow suit, instead having connections solely to nodes that share their
+ideological position.
+
+Blogs, however, differ from social media with regards to algorithms, which might suggest
+that the similarities in fragmantation and polarization in this network of climate blogs
+with social media in general mighht have more to do with conscious choices made by
+individuals. Which also suggest that we might have such polarization despite algorithms,
+and not necessarily because of them.
+
+This doesn't mean, however, that algorithms couldn't be useful in, say, bridging ideological
+divides. Instead of only suggesting topics of interests to individual based on what they're
+likely to like, algorithms could be made to present information accross ideological
+divides with some frequency. An ideal frequency would likely have to be found though so as
+not to annoy people, potentially causing them to mostly ignore suggestions and become even
+more ideologically entrenched.
+
+Despite the similarities between social media polarization and polarization in the sphere
+of climate blogs, there's not enough data here to suggest algorithms can't exasperate
+the problem. As someone like Tristan Harris makes clear, social media algorithms are designed
+to grab people's attention, and as a result increase the likelihood of them seeing and
+clicking on ads, regardless what type of information grabs people's attention.
+Controversial topics are likely to grab attention as well as topics individuals are likely
+to find interesting and agree with based upon previous patterns of that individual.
+If we were to make an algorithm with the hopes of bridging ideological divides, we should
+therefore be careful not to make an algorithm which ends up enflaring people in order
+to capture their attention, which again could cause even more polarization.
 
 \section{The psychology of social media}
 
